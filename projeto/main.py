@@ -13,7 +13,7 @@ if __name__ == '__main__':
     euro = Currency(name="Euro", value=6.04)
     iene = Currency(name="Iene Japones", value=0.046)
 
-    engine = create_engine('postgresql://postgres:Teste123@localhost/treinamento_radix', echo=True)
+    engine = create_engine('driver://user:password@localhost/dbname', echo=True)
     Base.metadata.create_all(engine)
 
     Session.configure(bind=engine)
